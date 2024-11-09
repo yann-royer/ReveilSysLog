@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.7.2" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.7.2(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="appear" val="right"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8"/>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="reader"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Menu Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool"/>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool lib="1" name="OR Gate"/>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate"/>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="reader">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="reader"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(100,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="0" loc="(100,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="B"/>
+    </comp>
+    <comp lib="0" loc="(390,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="dir"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(390,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="impulsion"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(260,130)" name="NOT Gate"/>
+    <comp lib="4" loc="(270,120)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(100,170)" to="(260,170)"/>
+    <wire from="(100,270)" to="(220,270)"/>
+    <wire from="(220,130)" to="(220,270)"/>
+    <wire from="(220,130)" to="(230,130)"/>
+    <wire from="(220,270)" to="(390,270)"/>
+    <wire from="(320,130)" to="(390,130)"/>
+  </circuit>
+  <circuit name="antiRebond">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="antiRebond"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(200,360)" name="Clock"/>
+    <comp lib="0" loc="(210,430)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="dataIn"/>
+    </comp>
+    <comp lib="0" loc="(770,430)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="dataOut"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="1" loc="(640,310)" name="AND Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(650,240)" name="NOR Gate">
+      <a name="inputs" val="3"/>
+    </comp>
+    <comp lib="1" loc="(660,410)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="negate0" val="true"/>
+      <a name="negate1" val="true"/>
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(670,430)" name="Controlled Buffer">
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(710,310)" name="Controlled Buffer">
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(720,240)" name="Controlled Inverter">
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="4" loc="(320,420)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(390,420)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(460,420)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp lib="4" loc="(530,420)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(200,360)" to="(270,360)"/>
+    <wire from="(210,430)" to="(310,430)"/>
+    <wire from="(270,360)" to="(270,500)"/>
+    <wire from="(270,500)" to="(300,500)"/>
+    <wire from="(300,470)" to="(300,500)"/>
+    <wire from="(300,470)" to="(310,470)"/>
+    <wire from="(300,500)" to="(380,500)"/>
+    <wire from="(370,430)" to="(380,430)"/>
+    <wire from="(380,290)" to="(380,430)"/>
+    <wire from="(380,290)" to="(550,290)"/>
+    <wire from="(380,470)" to="(380,500)"/>
+    <wire from="(380,500)" to="(450,500)"/>
+    <wire from="(440,310)" to="(440,430)"/>
+    <wire from="(440,310)" to="(560,310)"/>
+    <wire from="(440,430)" to="(450,430)"/>
+    <wire from="(450,470)" to="(450,500)"/>
+    <wire from="(450,500)" to="(520,500)"/>
+    <wire from="(510,430)" to="(520,430)"/>
+    <wire from="(520,330)" to="(520,430)"/>
+    <wire from="(520,330)" to="(570,330)"/>
+    <wire from="(520,470)" to="(520,500)"/>
+    <wire from="(550,220)" to="(550,290)"/>
+    <wire from="(550,220)" to="(590,220)"/>
+    <wire from="(550,290)" to="(590,290)"/>
+    <wire from="(560,240)" to="(560,310)"/>
+    <wire from="(560,240)" to="(590,240)"/>
+    <wire from="(560,310)" to="(590,310)"/>
+    <wire from="(570,260)" to="(570,330)"/>
+    <wire from="(570,260)" to="(590,260)"/>
+    <wire from="(570,330)" to="(590,330)"/>
+    <wire from="(580,430)" to="(650,430)"/>
+    <wire from="(640,310)" to="(660,310)"/>
+    <wire from="(650,240)" to="(670,240)"/>
+    <wire from="(650,340)" to="(650,370)"/>
+    <wire from="(650,340)" to="(660,340)"/>
+    <wire from="(660,280)" to="(660,310)"/>
+    <wire from="(660,280)" to="(700,280)"/>
+    <wire from="(660,310)" to="(660,340)"/>
+    <wire from="(660,310)" to="(690,310)"/>
+    <wire from="(660,410)" to="(660,420)"/>
+    <wire from="(670,220)" to="(670,240)"/>
+    <wire from="(670,220)" to="(700,220)"/>
+    <wire from="(670,240)" to="(670,370)"/>
+    <wire from="(670,240)" to="(690,240)"/>
+    <wire from="(670,430)" to="(720,430)"/>
+    <wire from="(700,220)" to="(700,230)"/>
+    <wire from="(700,280)" to="(700,300)"/>
+    <wire from="(710,310)" to="(720,310)"/>
+    <wire from="(720,240)" to="(720,310)"/>
+    <wire from="(720,310)" to="(720,430)"/>
+    <wire from="(720,430)" to="(770,430)"/>
+  </circuit>
+  <circuit name="main">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(280,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(280,200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(860,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="direction"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(860,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="impulsion"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp loc="(500,150)" name="antiRebond"/>
+    <comp loc="(500,200)" name="antiRebond"/>
+    <comp loc="(860,150)" name="reader"/>
+    <wire from="(500,150)" to="(640,150)"/>
+    <wire from="(500,200)" to="(550,200)"/>
+    <wire from="(550,170)" to="(550,200)"/>
+    <wire from="(550,170)" to="(640,170)"/>
+  </circuit>
+</project>
