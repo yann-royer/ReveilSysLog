@@ -73,17 +73,78 @@
     <a name="downloadFrequency" val="2.0"/>
     <a name="simulationFrequency" val="2.0"/>
     <boardmap boardname="TERASIC_DE10LITE">
-      <mc key="/Epm" map="575,285"/>
-      <mc key="/PM" pmap="371_355_9"/>
+      <mc/>
+      <mc/>
       <mc key="/S0" map="326,336"/>
       <mc key="/S1" map="286,336"/>
       <mc key="/S2" map="245,336"/>
       <mc key="/S3" map="204,336"/>
       <mc key="/S4" map="163,336"/>
       <mc key="/S5" map="122,336"/>
-      <mc key="/Setting" pmap="371_355_1"/>
-      <mc key="/Switch" map="575,243"/>
     </boardmap>
+    <comp lib="0" loc="(410,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Encoder_button"/>
+    </comp>
+    <comp lib="0" loc="(410,400)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="Menu"/>
+    </comp>
+    <comp lib="0" loc="(790,340)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S0"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,360)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S1"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,380)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S2"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,400)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S3"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,420)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S4"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,440)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="S5"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp loc="(750,340)" name="screen_managment">
+      <a name="label" val="sm"/>
+    </comp>
+    <wire from="(410,370)" to="(420,370)"/>
+    <wire from="(410,400)" to="(530,400)"/>
+    <wire from="(420,370)" to="(420,380)"/>
+    <wire from="(420,380)" to="(530,380)"/>
+    <wire from="(750,340)" to="(790,340)"/>
+    <wire from="(750,360)" to="(790,360)"/>
+    <wire from="(750,380)" to="(790,380)"/>
+    <wire from="(750,400)" to="(790,400)"/>
+    <wire from="(750,420)" to="(790,420)"/>
+    <wire from="(750,440)" to="(790,440)"/>
   </circuit>
   <circuit name="base24Increment">
     <a name="appearance" val="logisim_evolution"/>
@@ -715,7 +776,13 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="decodeur_7seg_mieux"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="downloadBoard" val="TERASIC_DE10LITE"/>
     <a name="simulationFrequency" val="1.0"/>
+    <boardmap boardname="TERASIC_DE10LITE">
+      <mc/>
+      <mc/>
+      <mc/>
+    </boardmap>
     <comp lib="0" loc="(120,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="E"/>
@@ -3369,6 +3436,7 @@
     <comp lib="0" loc="(440,110)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="Current_menu"/>
       <a name="output" val="true"/>
       <a name="radix" val="16"/>
       <a name="width" val="48"/>
@@ -3430,36 +3498,42 @@
     <comp lib="0" loc="(1270,400)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S0"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(1270,420)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S1"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(1270,440)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S2"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(1270,460)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S3"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(1270,480)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S4"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(1270,500)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S5"/>
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
@@ -3470,13 +3544,24 @@
     <comp lib="4" loc="(230,490)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
+    <comp lib="8" loc="(825,351)" name="Text">
+      <a name="text" val="Un caractere=2 octets"/>
+    </comp>
     <comp lib="8" loc="(841,332)" name="Text">
       <a name="text" val="Ajouter les différents menus et connecter leur texte"/>
     </comp>
-    <comp loc="(1230,400)" name="print_text"/>
-    <comp loc="(440,600)" name="menu_managment"/>
-    <comp loc="(670,540)" name="print_menu"/>
-    <comp loc="(980,400)" name="sub_screen_managment"/>
+    <comp loc="(1230,400)" name="print_text">
+      <a name="label" val="Pt"/>
+    </comp>
+    <comp loc="(440,600)" name="menu_managment">
+      <a name="label" val="mm"/>
+    </comp>
+    <comp loc="(670,540)" name="print_menu">
+      <a name="label" val="pm"/>
+    </comp>
+    <comp loc="(980,400)" name="sub_screen_managment">
+      <a name="label" val="ssm"/>
+    </comp>
     <wire from="(110,500)" to="(130,500)"/>
     <wire from="(110,540)" to="(150,540)"/>
     <wire from="(110,580)" to="(110,670)"/>
@@ -3625,12 +3710,24 @@
       <a name="output" val="true"/>
       <a name="width" val="8"/>
     </comp>
-    <comp loc="(490,120)" name="decodeur_7seg_mieux"/>
-    <comp loc="(490,190)" name="decodeur_7seg_mieux"/>
-    <comp loc="(490,260)" name="decodeur_7seg_mieux"/>
-    <comp loc="(490,330)" name="decodeur_7seg_mieux"/>
-    <comp loc="(490,400)" name="decodeur_7seg_mieux"/>
-    <comp loc="(490,470)" name="decodeur_7seg_mieux"/>
+    <comp loc="(490,120)" name="decodeur_7seg_mieux">
+      <a name="label" val="ds1"/>
+    </comp>
+    <comp loc="(490,190)" name="decodeur_7seg_mieux">
+      <a name="label" val="ds2"/>
+    </comp>
+    <comp loc="(490,260)" name="decodeur_7seg_mieux">
+      <a name="label" val="ds3"/>
+    </comp>
+    <comp loc="(490,330)" name="decodeur_7seg_mieux">
+      <a name="label" val="ds4"/>
+    </comp>
+    <comp loc="(490,400)" name="decodeur_7seg_mieux">
+      <a name="label" val="ds5"/>
+    </comp>
+    <comp loc="(490,470)" name="decodeur_7seg_mieux">
+      <a name="label" val="ds6"/>
+    </comp>
     <wire from="(180,130)" to="(200,130)"/>
     <wire from="(220,140)" to="(270,140)"/>
     <wire from="(220,210)" to="(270,210)"/>
