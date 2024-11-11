@@ -9,6 +9,13 @@
       <a name="fanout" val="5"/>
       <a name="incoming" val="5"/>
     </tool>
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+      <a name="value" val="0x0"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
@@ -197,12 +204,15 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="downloadBoard" val="TERASIC_DE10LITE"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(280,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="A"/>
     </comp>
     <comp lib="0" loc="(280,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B"/>
     </comp>
     <comp lib="0" loc="(860,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -216,9 +226,15 @@
       <a name="label" val="impulsion"/>
       <a name="output" val="true"/>
     </comp>
-    <comp loc="(500,150)" name="antiRebond"/>
-    <comp loc="(500,200)" name="antiRebond"/>
-    <comp loc="(860,150)" name="reader"/>
+    <comp loc="(500,150)" name="antiRebond">
+      <a name="label" val="ar"/>
+    </comp>
+    <comp loc="(500,200)" name="antiRebond">
+      <a name="label" val="ar2"/>
+    </comp>
+    <comp loc="(860,150)" name="reader">
+      <a name="label" val="r"/>
+    </comp>
     <wire from="(500,150)" to="(640,150)"/>
     <wire from="(500,200)" to="(550,200)"/>
     <wire from="(550,170)" to="(550,200)"/>
